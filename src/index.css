@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== DEEP THEME =====
+   Light: #E8EDF5 (deeper cool slate) | Dark: #070D1A (deep navy) */
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    @apply bg-[#E8EDF5] text-slate-800 dark:bg-[#070D1A] dark:text-slate-100 antialiased overflow-x-hidden;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #e4e9f2; }
+  ::-webkit-scrollbar-thumb { background: rgba(15, 23, 42, 0.25); border-radius: 9999px; }
+  .dark ::-webkit-scrollbar-track { background: #070d1a; }
+  .dark ::-webkit-scrollbar-thumb { background: rgba(56, 189, 248, 0.35); }
+}
+
+/* ---------- Backdrop grid ---------- */
+.bg-grid {
+  background-size: 56px 56px;
+  background-image:
+    linear-gradient(rgba(71, 85, 105, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(71, 85, 105, 0.09) 1px, transparent 1px);
+  -webkit-mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+  mask-image: radial-gradient(circle at center, black 30%, transparent 80%);
+}
+.dark .bg-grid {
+  background-image:
+    linear-gradient(rgba(148, 163, 184, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(148, 163, 184, 0.055) 1px, transparent 1px);
+}
+
+/* ---------- Marquee edge fade ---------- */
+.mq-mask {
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+/* ---------- Keyframes ---------- */
+@keyframes marquee { to { transform: translateX(-50%); } }
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes pulseRing {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(56, 189, 248, 0.35); }
+  50% { box-shadow: 0 0 0 22px rgba(56, 189, 248, 0); }
+}
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Orbits — desktop */
+@keyframes orbit1 { from { transform: rotate(0deg) translateX(160px) rotate(0deg); } to { transform: rotate(360deg) translateX(160px) rotate(-360deg); } }
+@keyframes orbit2 { from { transform: rotate(0deg) translateX(200px) rotate(0deg); } to { transform: rotate(360deg) translateX(200px) rotate(-360deg); } }
+@keyframes orbit3 { from { transform: rotate(0deg) translateX(130px) rotate(0deg); } to { transform: rotate(360deg) translateX(130px) rotate(-360deg); } }
+@keyframes orbit4 { from { transform: rotate(0deg) translateX(240px) rotate(0deg); } to { transform: rotate(360deg) translateX(240px) rotate(-360deg); } }
+
+/* Orbits — tablet */
+@media (min-width: 641px) and (max-width: 1023px) {
+  @keyframes orbit1 { from { transform: rotate(0deg) translateX(135px) rotate(0deg); } to { transform: rotate(360deg) translateX(135px) rotate(-360deg); } }
+  @keyframes orbit2 { from { transform: rotate(0deg) translateX(170px) rotate(0deg); } to { transform: rotate(360deg) translateX(170px) rotate(-360deg); } }
+  @keyframes orbit3 { from { transform: rotate(0deg) translateX(110px) rotate(0deg); } to { transform: rotate(360deg) translateX(110px) rotate(-360deg); } }
+  @keyframes orbit4 { from { transform: rotate(0deg) translateX(200px) rotate(0deg); } to { transform: rotate(360deg) translateX(200px) rotate(-360deg); } }
+}
+
+/* Orbits — mobile */
+@media (max-width: 640px) {
+  @keyframes orbit1 { from { transform: rotate(0deg) translateX(100px) rotate(0deg); } to { transform: rotate(360deg) translateX(100px) rotate(-360deg); } }
+  @keyframes orbit2 { from { transform: rotate(0deg) translateX(130px) rotate(0deg); } to { transform: rotate(360deg) translateX(130px) rotate(-360deg); } }
+  @keyframes orbit3 { from { transform: rotate(0deg) translateX(82px) rotate(0deg); } to { transform: rotate(360deg) translateX(82px) rotate(-360deg); } }
+  @keyframes orbit4 { from { transform: rotate(0deg) translateX(150px) rotate(0deg); } to { transform: rotate(360deg) translateX(150px) rotate(-360deg); } }
+}
