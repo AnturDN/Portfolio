@@ -58,7 +58,7 @@ export default function Contact() {
             kicker="Contact"
             title="Let's build something"
             highlight="together"
-            sub="Have a project in mind? Click on my email — I usually reply within 24 hours."
+            sub="Have a project in mind? Click on my email - I usually reply within 24 hours."
           />
         </Reveal>
 
