@@ -18,7 +18,7 @@ const ORBITS = [
 
 
 const STATS = [
-  { value: '20+', label: 'Projects' },
+  { value: '15+', label: 'Projects' },
   { value: '1.5year', label: 'Experience' },
   { value: '3', label: 'Languages' },
 ];
@@ -54,7 +54,7 @@ export default function Hero() {
           </div>
           <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-white/95 dark:bg-white/[0.08] backdrop-blur-xl border border-slate-900/10 dark:border-white/10 rounded-full px-5 py-2 whitespace-nowrap shadow-lg shadow-slate-900/10 dark:shadow-black/30">
             <span className="text-sm font-medium text-slate-900 dark:text-white">Antur Deb Nath</span>
-            <span className="text-xs text-slate-500 dark:text-slate-400 ml-2">Full Stack Dev</span>
+            <span className="text-xs text-slate-500 dark:text-slate-400 ml-2">Software Dev</span>
           </div>
         </div>
       </div>
@@ -76,7 +76,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-400 font-light leading-relaxed max-w-2xl mx-auto mb-8 opacity-0 animate-[fadeUp_0.8s_ease-out_0.45s_forwards]">
-          Full Stack Developer building responsive, high-performance web apps with{' '}
+          Software Developer building responsive, high-performance web apps with{' '}
           <span className="text-sky-600 dark:text-sky-400 font-normal">React.js</span> &{' '}
           <span className="text-sky-600 dark:text-sky-400 font-normal">Laravel</span>
         </p>
@@ -86,7 +86,7 @@ export default function Hero() {
             View My Work <LuArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
           {/* NOTE: public/ folder e resume.pdf rakhle download hobe (original e kaj korto na) */}
-          <a href="/Antur_Deb_Nath_Resume.pdf" download className="flex items-center gap-3 font-medium text-sm px-7 py-3.5 rounded-full bg-slate-900/[0.04] dark:bg-white/[0.06] border border-slate-900/10 dark:border-white/10 text-slate-800 dark:text-white hover:border-sky-600/50 dark:hover:border-sky-400/40 hover:bg-slate-900/[0.07] dark:hover:bg-white/[0.1] transition-all duration-300">
+          <a href="/Antur_Deb_Nath_Frontend_Resume.pdf" download className="flex items-center gap-3 font-medium text-sm px-7 py-3.5 rounded-full bg-slate-900/[0.04] dark:bg-white/[0.06] border border-slate-900/10 dark:border-white/10 text-slate-800 dark:text-white hover:border-sky-600/50 dark:hover:border-sky-400/40 hover:bg-slate-900/[0.07] dark:hover:bg-white/[0.1] transition-all duration-300">
             <LuDownload className="w-4 h-4" /> Download Resume
           </a>
         </div>
