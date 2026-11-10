@@ -4,7 +4,7 @@ import { Reveal } from './ui';
 const INFO = [
   { Icon: LuMail, value: 'anturdebnath.dev@gmail.com' },
   { Icon: LuPhone, value: '+880 1770 125058' },
-  { Icon: LuGraduationCap, value: 'BSc in CSE (Ongoing)' },
+  { Icon: LuGraduationCap, value: 'BSc in CSE' },
   { Icon: LuLanguages, value: 'Bangla, English, Hindi' },
 ];
 
