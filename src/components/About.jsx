@@ -38,7 +38,7 @@ export default function About() {
               <span className="text-slate-500 dark:text-slate-200">with clean code</span>
             </h2>
             <p className="text-base text-slate-500 dark:text-slate-400 font-light leading-[1.8] mb-5">
-              I&apos;m a Full Stack Developer based in Dhaka, Bangladesh, currently pursuing my BSc in
+              I&apos;m a Software Developer based in Dhaka, Bangladesh, currently pursuing my BSc in
               Computer Science &amp; Engineering at Northern University Bangladesh. I specialize in building
               modern web applications using React.js and Laravel.
             </p>
