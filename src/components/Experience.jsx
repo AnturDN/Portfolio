@@ -70,6 +70,7 @@ export default function Experience() {
 }
 
 /* ---------- Education ---------- */
+
 export function Education() {
   return (
     <section id="education" className="relative py-24 sm:py-32 px-6">
@@ -85,14 +86,25 @@ export function Education() {
               </div>
               <div className="flex-1">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-3">
-                  <h3 className="text-lg font-medium text-slate-900 dark:text-white">Bachelor of Science in CSE</h3>
-                  <span className="inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full w-fit bg-emerald-600/10 dark:bg-emerald-400/10 text-emerald-700 dark:text-emerald-400">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Graduated
-                  </span>
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> CGPA : 3.53
-                  </span>
+                  <h3 className="text-lg font-medium text-slate-900 dark:text-white">
+                    Bachelor of Science in CSE
+                  </h3>
+
+                  <div className="flex items-center gap-3">
+                    <span className="inline-flex items-center gap-1.5 text-xs px-3 py-1 rounded-full w-fit bg-emerald-600/10 dark:bg-emerald-400/10 text-emerald-700 dark:text-emerald-400">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                      Graduated
+                    </span>
+
+                    <span className="text-xs text-slate-500">
+                      CGPA: 3.53
+                    </span>
+                  </div>
                 </div>
-                <p className="text-sm text-slate-600 dark:text-slate-300 mb-2">Northern University Bangladesh</p>
+
+                <p className="text-sm text-slate-600 dark:text-slate-300 mb-2">
+                  Northern University Bangladesh
+                </p>
                 <p className="text-xs text-slate-500 flex items-center gap-1.5">
                   <LuMapPin className="w-3 h-3" /> Dhaka, Bangladesh
                 </p>
@@ -104,6 +116,7 @@ export function Education() {
     </section>
   );
 }
+
 
 /* ---------- Languages ---------- */
 /* ---------- Languages ---------- */
