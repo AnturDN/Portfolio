@@ -10,7 +10,7 @@ const CATEGORIES = [
   {
     Icon: LuServer, title: 'Backend',
     chip: 'bg-emerald-600/10 dark:bg-emerald-400/10 text-emerald-600 dark:text-emerald-400',
-    tags: ['PHP', 'Laravel', 'RESTful APIs'],
+    tags: ['Laravel', 'RESTful APIs'],
   },
   {
     Icon: LuDatabase, title: 'Database',
