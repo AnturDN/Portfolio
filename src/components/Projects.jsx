@@ -1,5 +1,7 @@
-import { LuUser, LuCheck } from "react-icons/lu";
+import { LuUser, LuCheck, LuExternalLink } from "react-icons/lu";
+import { FaGithub } from "react-icons/fa";
 import { Reveal, SectionHeading, card } from "./ui";
+
 
 const PROJECTS = [
   {
@@ -29,6 +31,8 @@ const PROJECTS = [
       "OpenCV",
       "scikit-learn",
     ],
+    live: null,
+    github: "https://github.com/AnturDN/deepfake-video-detection-vit-bigru-celebdf", // TODO: replace
     delay: 0,
   },
   {
@@ -56,6 +60,8 @@ const PROJECTS = [
       "Framer Motion",
       "React Icons",
     ],
+    live: "https://bytespace-antur.vercel.app/", // TODO: replace
+    github: "https://github.com/AnturDN/ByteSpace", // TODO: replace
     delay: 0,
   },
   {
@@ -81,6 +87,8 @@ const PROJECTS = [
       "Framer Motion",
       "REST API",
     ],
+    live: null, // TODO: link thakle dao
+    github: null, // TODO: link thakle dao
     delay: 0,
   },
   {
@@ -106,6 +114,8 @@ const PROJECTS = [
       "Tailwind",
       "Framer Motion",
     ],
+    live: null, // TODO: link thakle dao
+    // github: "https://github.com/your-username/inventory-system", // TODO: replace
     delay: 150,
   },
 ];
@@ -173,15 +183,45 @@ export default function Projects() {
                     ))}
                   </ul>
 
-                  <div className="mt-auto flex flex-wrap gap-1.5 pt-5 border-t border-slate-900/[0.08] dark:border-white/[0.06]">
-                    {p.stack.map((t) => (
-                      <span
-                        key={t}
-                        className="text-[10px] bg-slate-900/[0.05] dark:bg-white/[0.06] text-slate-600 dark:text-slate-400 px-2.5 py-1 rounded"
-                      >
-                        {t}
-                      </span>
-                    ))}
+                  {/* mt-auto wrapper: links + stack sob card-e ekdom niche thake */}
+                  <div className="mt-auto">
+                    {(p.live || p.github) && (
+                      <div className="flex flex-wrap gap-3 mb-5">
+                        {p.live && (
+                          <a
+                            href={p.live}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-xs font-medium px-4 py-2 rounded-lg bg-sky-500 text-white hover:bg-sky-600 transition-colors"
+                          >
+                            <LuExternalLink className="w-3.5 h-3.5" />
+                            Live Demo
+                          </a>
+                        )}
+                        {p.github && (
+                          <a
+                            href={p.github}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 text-xs font-medium px-4 py-2 rounded-lg border border-slate-900/15 dark:border-white/15 text-slate-700 dark:text-slate-200 hover:bg-slate-900/[0.05] dark:hover:bg-white/[0.06] transition-colors"
+                          >
+                            <FaGithub className="w-3.5 h-3.5" />
+                            GitHub
+                          </a>
+                        )}
+                      </div>
+                    )}
+
+                    <div className="flex flex-wrap gap-1.5 pt-5 border-t border-slate-900/[0.08] dark:border-white/[0.06]">
+                      {p.stack.map((t) => (
+                        <span
+                          key={t}
+                          className="text-[10px] bg-slate-900/[0.05] dark:bg-white/[0.06] text-slate-600 dark:text-slate-400 px-2.5 py-1 rounded"
+                        >
+                          {t}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
               </article>
