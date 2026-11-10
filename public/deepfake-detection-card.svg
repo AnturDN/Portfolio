@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" font-family="Inter, 'DejaVu Sans', sans-serif" xmlns:c2pa="http://c2pa.org/manifest">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#0b1220"/><stop offset="1" stop-color="#0f2a47"/>
+  </linearGradient>
+  <radialGradient id="glow" cx="0.85" cy="0.1" r="0.6">
+    <stop offset="0" stop-color="#38bdf8" stop-opacity="0.28"/><stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="f1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1e3a5f"/><stop offset="1" stop-color="#2b5c8f"/></linearGradient>
+  <marker id="ar" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto"><path d="M1 1 L6 4 L1 7" fill="none" stroke="#7dd3fc" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <marker id="arS" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M1 0.8 L5 3 L1 5.2" fill="none" stroke="#38bdf8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+  <marker id="arV" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M1 0.8 L5 3 L1 5.2" fill="none" stroke="#a78bfa" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+
+<rect width="800" height="500" fill="url(#bg)"/>
+<rect width="800" height="500" fill="url(#glow)"/>
+
+<!-- Title -->
+<text x="50" y="72" fill="#ffffff" font-size="27" font-weight="700">Deepfake Video Detection</text>
+<text x="50" y="98" fill="#7dd3fc" font-size="13.5" font-weight="500" letter-spacing="0.4">Hybrid spatio-temporal deep learning  ·  ViT + BiGRU + Temporal Attention</text>
+
+<!-- Blocks -->
+<g fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.16" stroke-width="1">
+  <rect x="50"  y="150" width="120" height="170" rx="14"/>
+  <rect x="195" y="150" width="120" height="170" rx="14"/>
+  <rect x="340" y="150" width="120" height="170" rx="14"/>
+  <rect x="485" y="150" width="120" height="170" rx="14"/>
+  <rect x="630" y="150" width="120" height="170" rx="14"/>
+</g>
+
+<!-- Arrows between blocks -->
+<g stroke="#7dd3fc" stroke-width="1.6" fill="none" stroke-linecap="round">
+  <line x1="174" y1="235" x2="191" y2="235" marker-end="url(#ar)"/>
+  <line x1="319" y1="235" x2="336" y2="235" marker-end="url(#ar)"/>
+  <line x1="464" y1="235" x2="481" y2="235" marker-end="url(#ar)"/>
+  <line x1="609" y1="235" x2="626" y2="235" marker-end="url(#ar)"/>
+</g>
+
+<!-- Step numbers -->
+<g font-size="10" font-weight="700" fill="#38bdf8" text-anchor="middle">
+  <text x="110" y="170">01</text><text x="255" y="170">02</text><text x="400" y="170">03</text><text x="545" y="170">04</text><text x="690" y="170">05</text>
+</g>
+
+<!-- 1: Frame sampling (stacked frames) -->
+<g>
+  <rect x="82" y="190" width="56" height="40" rx="5" fill="#16314f" stroke="#38bdf8" stroke-opacity="0.35"/>
+  <rect x="90" y="198" width="56" height="40" rx="5" fill="#1c4066" stroke="#38bdf8" stroke-opacity="0.5"/>
+  <rect x="98" y="206" width="56" height="40" rx="5" fill="url(#f1)" stroke="#7dd3fc" stroke-opacity="0.9"/>
+  <path d="M121 218 L121 234 L135 226 Z" fill="#e0f2fe"/>
+</g>
+
+<!-- 2: Face extraction -->
+<g>
+  <g stroke="#38bdf8" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M228 202 V192 H238"/><path d="M272 192 H282 V202"/>
+    <path d="M282 238 V248 H272"/><path d="M238 248 H228 V238"/>
+  </g>
+  <circle cx="255" cy="212" r="9" fill="#bae6fd"/>
+  <path d="M238 242 C238 229 272 229 272 242 Z" fill="#7dd3fc" fill-opacity="0.85"/>
+</g>
+
+<!-- 3: ViT patches -->
+<g>
+  <g fill="#1e4a7a" stroke="#38bdf8" stroke-opacity="0.35" stroke-width="0.8">
+    <rect x="373" y="190" width="12" height="12" rx="2"/><rect x="387" y="190" width="12" height="12" rx="2" fill="#38bdf8" fill-opacity="0.8"/><rect x="401" y="190" width="12" height="12" rx="2"/><rect x="415" y="190" width="12" height="12" rx="2"/>
+    <rect x="373" y="204" width="12" height="12" rx="2"/><rect x="387" y="204" width="12" height="12" rx="2"/><rect x="401" y="204" width="12" height="12" rx="2" fill="#38bdf8" fill-opacity="0.8"/><rect x="415" y="204" width="12" height="12" rx="2" fill="#38bdf8" fill-opacity="0.5"/>
+    <rect x="373" y="218" width="12" height="12" rx="2" fill="#38bdf8" fill-opacity="0.5"/><rect x="387" y="218" width="12" height="12" rx="2"/><rect x="401" y="218" width="12" height="12" rx="2"/><rect x="415" y="218" width="12" height="12" rx="2" fill="#38bdf8" fill-opacity="0.8"/>
+    <rect x="373" y="232" width="12" height="12" rx="2"/><rect x="387" y="232" width="12" height="12" rx="2" fill="#38bdf8" fill-opacity="0.5"/><rect x="401" y="232" width="12" height="12" rx="2"/><rect x="415" y="232" width="12" height="12" rx="2"/>
+  </g>
+</g>
+
+<!-- 4: BiGRU (forward + backward) -->
+<g>
+  <g stroke="#38bdf8" stroke-width="1.3" fill="none" stroke-linecap="round">
+    <line x1="516.5" y1="200" x2="525" y2="200" marker-end="url(#arS)"/>
+    <line x1="540.5" y1="200" x2="549" y2="200" marker-end="url(#arS)"/>
+    <line x1="564.5" y1="200" x2="573" y2="200" marker-end="url(#arS)"/>
+  </g>
+  <g fill="#0b1220" stroke="#38bdf8" stroke-width="1.8">
+    <circle cx="509" cy="200" r="6"/>
+    <circle cx="533" cy="200" r="6"/>
+    <circle cx="557" cy="200" r="6"/>
+    <circle cx="581" cy="200" r="6"/>
+  </g>
+  <g stroke="#a78bfa" stroke-width="1.3" fill="none" stroke-linecap="round">
+    <line x1="525.5" y1="230" x2="517" y2="230" marker-end="url(#arV)"/>
+    <line x1="549.5" y1="230" x2="541" y2="230" marker-end="url(#arV)"/>
+    <line x1="573.5" y1="230" x2="565" y2="230" marker-end="url(#arV)"/>
+  </g>
+  <g fill="#0b1220" stroke="#a78bfa" stroke-width="1.8">
+    <circle cx="509" cy="230" r="6"/>
+    <circle cx="533" cy="230" r="6"/>
+    <circle cx="557" cy="230" r="6"/>
+    <circle cx="581" cy="230" r="6"/>
+  </g>
+  <g stroke="#ffffff" stroke-opacity="0.25" stroke-width="1">
+    <line x1="509" y1="206" x2="509" y2="224"/>
+    <line x1="533" y1="206" x2="533" y2="224"/>
+    <line x1="557" y1="206" x2="557" y2="224"/>
+    <line x1="581" y1="206" x2="581" y2="224"/>
+  </g>
+</g>
+
+<!-- 5: Temporal attention (frame weights) -->
+<g>
+  <g fill="#2b5c8f">
+    <rect x="659" y="228" width="7" height="14" rx="2"/>
+    <rect x="670" y="216" width="7" height="26" rx="2"/>
+    <rect x="681" y="202" width="7" height="40" rx="2" fill="#38bdf8"/>
+    <rect x="692" y="220" width="7" height="22" rx="2"/>
+    <rect x="703" y="194" width="7" height="48" rx="2" fill="#7dd3fc"/>
+    <rect x="714" y="224" width="7" height="18" rx="2"/>
+  </g>
+  <line x1="655" y1="245" x2="725" y2="245" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1"/>
+</g>
+
+<!-- Labels -->
+<g text-anchor="middle" fill="#ffffff" font-size="13" font-weight="600">
+  <text x="110" y="283">Frame Sampling</text>
+  <text x="255" y="283">Face Extraction</text>
+  <text x="400" y="283">ViT-B/16</text>
+  <text x="545" y="283">BiGRU</text>
+  <text x="690" y="283">Attention</text>
+</g>
+<g text-anchor="middle" fill="#ffffff" fill-opacity="0.6" font-size="10.5">
+  <text x="110" y="302">20 frames / video</text>
+  <text x="255" y="302">224 × 224 crops</text>
+  <text x="400" y="302">spatial features</text>
+  <text x="545" y="302">temporal context</text>
+  <text x="690" y="302">frame weighting</text>
+</g>
+
+<!-- Connector to output -->
+<path d="M690 324 V395 H548" fill="none" stroke="#7dd3fc" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ar)"/>
+
+<!-- Output pill -->
+<rect x="370" y="372" width="176" height="46" rx="23" fill="#ffffff" fill-opacity="0.08" stroke="#ffffff" stroke-opacity="0.2"/>
+<circle cx="404" cy="395" r="6" fill="#34d399"/>
+<text x="418" y="400" fill="#ffffff" font-size="14" font-weight="700">REAL</text>
+<text x="458" y="400" fill="#ffffff" fill-opacity="0.45" font-size="14">/</text>
+<circle cx="478" cy="395" r="6" fill="#f87171"/>
+<text x="490" y="400" fill="#ffffff" font-size="14" font-weight="700">FAKE</text>
+
+<!-- Result chips -->
+<rect x="50" y="372" width="128" height="46" rx="12" fill="#38bdf8" fill-opacity="0.16" stroke="#38bdf8" stroke-opacity="0.55"/>
+<text x="114" y="392" text-anchor="middle" fill="#7dd3fc" font-size="10" font-weight="600" letter-spacing="0.8">AUC-ROC</text>
+<text x="114" y="410" text-anchor="middle" fill="#ffffff" font-size="17" font-weight="700">0.98</text>
+
+<rect x="192" y="372" width="160" height="46" rx="12" fill="#ffffff" fill-opacity="0.06" stroke="#ffffff" stroke-opacity="0.16"/>
+<text x="272" y="392" text-anchor="middle" fill="#ffffff" fill-opacity="0.6" font-size="10" font-weight="600" letter-spacing="0.8">DATASET</text>
+<text x="272" y="410" text-anchor="middle" fill="#ffffff" font-size="14" font-weight="700">Celeb-DF v2</text>
+<metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTpkN2MwNTNhOS1lYjZhLTQxMjktOWI2NC1lZTc3MGM4YzI4NDkAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaAGEiM9W5xQyJkJ+dngcqhsAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDpiNjQ3YmU3MS0zYjRkLTRlZjQtYjA1OC01NTRkMzMwMTA3MDdscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoBu53DE0FcNXukPAsUTSBMwAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFgg3gJoZjiAxj0xiqm18+iKfZWJTrrLiDBeM/GEirYpSOCkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaLsqt/6y3d0z64iWBdxSld8AAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYINo3POH/HhmleCM0fecq/DVMnZhYxMR4jVRdOaJdQuVOZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GSJ+Zmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmQ3YzA1M2E5LWViNmEtNDEyOS05YjY0LWVlNzcwYzhjMjg0OS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjAxOTY0MjkzLWZjMGQtNDdiMy04Nzk4LTE3MmEyODE4NDA5N3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCDeAmhmOIDGPTGKqbXz6Ip9lYlOusuIMF4z8YSKtilI4KJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFgguH3wxDwv9DtdCsZUilUi2TkLGLD0lyVSLIEPI/Ut2ByiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggZ59ZrLO1+xHFPvGFoKP9mFSLdyCZCqNkYVAlS2w1JWV0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQMBM3u3hWHWZ9H4hE65n1O+QcowvYLmu/Lbac0AS8yLWounCP31TbcSj2bQ7X92BvVdZZaIS6FjLYlTJLYcOt84=</c2pa:manifest></metadata></svg>
