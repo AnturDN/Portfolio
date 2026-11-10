@@ -2,15 +2,33 @@ import { LuUser, LuCheck } from 'react-icons/lu';
 import { Reveal, SectionHeading, card } from './ui';
 
 const PROJECTS = [
+    {
+    img: './deepfake-detection-card.svg',
+    alt: 'Deepfake Video Detection',
+    title: 'Deepfake Video Detection',
+    badges: [
+      { text: 'Research', cls: 'bg-sky-500/25 text-sky-200' },
+      { text: 'Deep Learning', cls: 'bg-white/15 text-white/85 backdrop-blur-sm' },
+    ],
+    role: 'Researcher & Model Developer',
+    desc: 'A video-level deepfake detector combining a Vision Transformer, a Bidirectional GRU and temporal attention, trained and evaluated on the Celeb-DF v2 dataset (AUC-ROC 0.98).',
+    points: [
+      'Built a ViT-B/16 + BiGRU + multi-head temporal attention model for spatio-temporal analysis of face frames',
+      'Designed an identity-based train/validation/test split to prevent identity leakage across splits',
+      'Handled class imbalance using focal loss, weighted sampling, mixup and label smoothing',
+    ],
+    stack: ['Python', 'PyTorch', 'timm', 'Vision Transformer', 'BiGRU', 'OpenCV', 'scikit-learn'],
+    delay: 0,
+  },
   {
-    img: 'https://picsum.photos/seed/erp-dashboard-sys/800/500.jpg',
+    img: './praasad.png',
     alt: 'Praasad Group ERP System',
     title: 'Praasad Group ERP System',
     badges: [
       { text: 'Featured', cls: 'bg-sky-500/25 text-sky-200' },
       { text: 'ERP', cls: 'bg-white/15 text-white/85 backdrop-blur-sm' },
     ],
-    role: 'Full Stack Developer',
+    role: 'Frontend Developer',
     desc: 'A comprehensive ERP system automating core business operations including inventory, sales, customer management, and accounting modules.',
     points: [
       'Designed responsive UI with Framer Motion animations',
@@ -21,14 +39,14 @@ const PROJECTS = [
     delay: 0,
   },
   {
-    img: 'https://picsum.photos/seed/inventory-wh-mgmt/800/500.jpg',
+    img: './inventory.png',
     alt: 'Inventory Management System',
     title: 'Inventory Management System',
     badges: [
       { text: 'Full Stack', cls: 'bg-emerald-500/25 text-emerald-200' },
       { text: 'Management', cls: 'bg-white/15 text-white/85 backdrop-blur-sm' },
     ],
-    role: 'Full Stack Developer',
+    role: 'Frontend Developer',
     desc: 'A full-featured inventory system for tracking products, suppliers, stock levels, and warehouse operations with automated financial calculations.',
     points: [
       'Implemented CRUD with search & pagination',
