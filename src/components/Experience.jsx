@@ -35,12 +35,12 @@ export default function Experience() {
             <div className={`${card} p-6 sm:p-8`}>
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 mb-4">
                 <div>
-                  <h3 className="text-lg font-medium text-slate-900 dark:text-white">Full Stack Developer</h3>
+                  <h3 className="text-lg font-medium text-slate-900 dark:text-white">Frontend Developer</h3>
                   <p className="text-sm text-sky-700 dark:text-sky-400">MystrixIT</p>
                 </div>
                 <div className="flex items-center gap-2">
                   <LuCalendar className="w-3.5 h-3.5 text-slate-400" />
-                  <span className="text-xs text-slate-500 font-mono">Mar 2025 – Sep 2025</span>
+                  <span className="text-xs text-slate-500 font-mono">Feb 2025 – Aug 2025</span>
                 </div>
               </div>
               <p className="text-xs text-slate-500 mb-5 flex items-center gap-1.5">
