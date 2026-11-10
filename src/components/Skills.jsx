@@ -15,12 +15,12 @@ const CATEGORIES = [
   {
     Icon: LuDatabase, title: 'Database',
     chip: 'bg-violet-600/10 dark:bg-violet-400/10 text-violet-600 dark:text-violet-400',
-    tags: ['MySQL', 'MongoDB'],
+    tags: ['MySQL'],
   },
   {
     Icon: LuWrench, title: 'Languages & Tools',
     chip: 'bg-amber-600/10 dark:bg-amber-400/10 text-amber-600 dark:text-amber-400',
-    tags: ['C', 'C++', 'Java', 'Git', 'GitHub', 'Debugging', 'Testing', 'PostMan', 'Cloudinary'],
+    tags: ['C', 'C++', 'Java', 'Git', 'GitHub', 'Debugging', 'Testing', 'PostMan', 'Cloudinary','XAMPP'],
   },
 ];
 
