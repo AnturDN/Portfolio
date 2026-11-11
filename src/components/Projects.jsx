@@ -114,8 +114,8 @@ const PROJECTS = [
       "Tailwind",
       "Framer Motion",
     ],
-    live: null, // TODO: link thakle dao
-    // github: "https://github.com/your-username/inventory-system", // TODO: replace
+    live: "https://inventory-management-system-antur.vercel.app/", /
+    github: "https://github.com/AnturDN/Inventory_Management_System?utm_source=chatgpt.com", 
     delay: 150,
   },
 ];
