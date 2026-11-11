@@ -64,33 +64,7 @@ const PROJECTS = [
     github: "https://github.com/AnturDN/ByteSpace", // TODO: replace
     delay: 0,
   },
-  {
-    img: "./praasad.png",
-    alt: "Praasad Group ERP System",
-    title: "Praasad Group ERP System",
-    badges: [
-      { text: "Featured", cls: "bg-sky-500/25 text-sky-200" },
-      { text: "ERP", cls: "bg-white/15 text-white/85 backdrop-blur-sm" },
-    ],
-    role: "Frontend Developer",
-    desc: "A comprehensive ERP system automating core business operations including inventory, sales, customer management, and accounting modules.",
-    points: [
-      "Designed responsive UI with Framer Motion animations",
-      "Integrated RESTful APIs for dynamic CRUD operations",
-      "Maintained reusable component architecture",
-    ],
-    stack: [
-      "React.js",
-      "Laravel",
-      "MySQL",
-      "Tailwind",
-      "Framer Motion",
-      "REST API",
-    ],
-    live: null, // TODO: link thakle dao
-    github: null, // TODO: link thakle dao
-    delay: 0,
-  },
+
   {
     img: "./inventory.png",
     alt: "Inventory Management System",
@@ -117,6 +91,33 @@ const PROJECTS = [
     live: "https://inventory-management-system-antur.vercel.app/",
     github: "https://github.com/AnturDN/Inventory_Management_System?utm_source=chatgpt.com", 
     delay: 150,
+  },
+    {
+    img: "./praasad.png",
+    alt: "Praasad Group ERP System",
+    title: "Praasad Group ERP System",
+    badges: [
+      { text: "Featured", cls: "bg-sky-500/25 text-sky-200" },
+      { text: "ERP", cls: "bg-white/15 text-white/85 backdrop-blur-sm" },
+    ],
+    role: "Frontend Developer",
+    desc: "A comprehensive ERP system automating core business operations including inventory, sales, customer management, and accounting modules.",
+    points: [
+      "Designed responsive UI with Framer Motion animations",
+      "Integrated RESTful APIs for dynamic CRUD operations",
+      "Maintained reusable component architecture",
+    ],
+    stack: [
+      "React.js",
+      "Laravel",
+      "MySQL",
+      "Tailwind",
+      "Framer Motion",
+      "REST API",
+    ],
+    live: null,
+    github: "https://github.com/AnturDN/Praashad-Real-Estate-ERP", 
+    delay: 0,
   },
 ];
 
