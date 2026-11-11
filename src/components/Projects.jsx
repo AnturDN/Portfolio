@@ -136,14 +136,13 @@ export default function Projects() {
           />
         </Reveal>
 
-        {/* Responsive Project Grid */}
+
         <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-5 lg:gap-6">
           {PROJECTS.map((p) => (
             <Reveal key={p.title} delay={p.delay} className="h-full">
               <article
                 className={`group relative flex h-full flex-col overflow-hidden ${card}`}
               >
-                {/* Project Image */}
                 <div className="relative h-40 sm:h-44 lg:h-48 shrink-0 overflow-hidden">
                   <img
                     src={p.img}
@@ -154,7 +153,7 @@ export default function Projects() {
 
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
-                  {/* Project Badges */}
+              
                   <div className="absolute top-3 left-3 flex flex-wrap gap-2">
                     {p.badges.map((b) => (
                       <span
@@ -166,15 +165,13 @@ export default function Projects() {
                     ))}
                   </div>
 
-                  {/* Project Title */}
+                
                   <h3 className="absolute bottom-3 left-4 right-4 text-lg sm:text-xl font-semibold text-white leading-snug">
                     {p.title}
                   </h3>
                 </div>
 
-                {/* Project Content */}
                 <div className="flex flex-1 flex-col p-4 sm:p-5 lg:p-6">
-                  {/* Role */}
                   <div className="flex items-center gap-2 mb-3">
                     <LuUser className="w-4 h-4 shrink-0 text-sky-600 dark:text-sky-400" />
                     <span className="text-xs text-slate-500">
@@ -182,12 +179,10 @@ export default function Projects() {
                     </span>
                   </div>
 
-                  {/* Description */}
                   <p className="text-[13px] text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
                     {p.desc}
                   </p>
 
-                  {/* Project Highlights */}
                   <ul className="space-y-2 mb-5">
                     {p.points.map((pt) => (
                       <li
@@ -200,9 +195,8 @@ export default function Projects() {
                     ))}
                   </ul>
 
-                  {/* Buttons & Technology Stack */}
+        
                   <div className="mt-auto">
-                    {/* Project Links */}
                     {(p.live || p.github) && (
                       <div className="flex flex-wrap gap-2 mb-4">
                         {p.live && (
