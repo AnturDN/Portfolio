@@ -32,7 +32,7 @@ const PROJECTS = [
       "scikit-learn",
     ],
     live: null,
-    github: "https://github.com/AnturDN/deepfake-video-detection-vit-bigru-celebdf", // TODO: replace
+    github: "https://github.com/AnturDN/deepfake-video-detection-vit-bigru-celebdf",
     delay: 0,
   },
   {
@@ -60,11 +60,10 @@ const PROJECTS = [
       "Framer Motion",
       "React Icons",
     ],
-    live: "https://bytespace-antur.vercel.app/", // TODO: replace
-    github: "https://github.com/AnturDN/ByteSpace", // TODO: replace
+    live: "https://bytespace-antur.vercel.app/",
+    github: "https://github.com/AnturDN/ByteSpace",
     delay: 0,
   },
-
   {
     img: "./inventory.png",
     alt: "Inventory Management System",
@@ -184,7 +183,6 @@ export default function Projects() {
                     ))}
                   </ul>
 
-                  {/* mt-auto wrapper: links + stack sob card-e ekdom niche thake */}
                   <div className="mt-auto">
                     {(p.live || p.github) && (
                       <div className="flex flex-wrap gap-3 mb-5">
