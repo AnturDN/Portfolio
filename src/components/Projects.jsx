@@ -114,7 +114,7 @@ const PROJECTS = [
       "Tailwind",
       "Framer Motion",
     ],
-    live: "https://inventory-management-system-antur.vercel.app/", /
+    live: "https://inventory-management-system-antur.vercel.app/",
     github: "https://github.com/AnturDN/Inventory_Management_System?utm_source=chatgpt.com", 
     delay: 150,
   },
