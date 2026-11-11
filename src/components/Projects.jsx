@@ -1,7 +1,7 @@
+
 import { LuUser, LuCheck, LuExternalLink } from "react-icons/lu";
 import { FaGithub } from "react-icons/fa";
 import { Reveal, SectionHeading, card } from "./ui";
-
 
 const PROJECTS = [
   {
@@ -88,10 +88,10 @@ const PROJECTS = [
       "Framer Motion",
     ],
     live: "https://inventory-management-system-antur.vercel.app/",
-    github: "https://github.com/AnturDN/Inventory_Management_System?utm_source=chatgpt.com", 
+    github: "https://github.com/AnturDN/Inventory_Management_System",
     delay: 150,
   },
-    {
+  {
     img: "./praasad.png",
     alt: "Praasad Group ERP System",
     title: "Praasad Group ERP System",
@@ -115,14 +115,17 @@ const PROJECTS = [
       "REST API",
     ],
     live: null,
-    github: "https://github.com/AnturDN/Praashad-Real-Estate-ERP", 
+    github: "https://github.com/AnturDN/Praashad-Real-Estate-ERP",
     delay: 0,
   },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-24 sm:py-32 px-6">
+    <section
+      id="projects"
+      className="relative px-4 py-16 sm:px-6 sm:py-20 lg:py-24"
+    >
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <SectionHeading
@@ -133,76 +136,93 @@ export default function Projects() {
           />
         </Reveal>
 
-        <div className="grid lg:grid-cols-2 auto-rows-fr gap-6">
+        {/* Responsive Project Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-5 lg:gap-6">
           {PROJECTS.map((p) => (
             <Reveal key={p.title} delay={p.delay} className="h-full">
               <article
                 className={`group relative flex h-full flex-col overflow-hidden ${card}`}
               >
-                <div className="relative h-52 sm:h-60 shrink-0 overflow-hidden">
+                {/* Project Image */}
+                <div className="relative h-40 sm:h-44 lg:h-48 shrink-0 overflow-hidden">
                   <img
                     src={p.img}
                     alt={p.alt}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
+
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-                  <div className="absolute top-4 left-4 flex gap-2">
+
+                  {/* Project Badges */}
+                  <div className="absolute top-3 left-3 flex flex-wrap gap-2">
                     {p.badges.map((b) => (
                       <span
                         key={b.text}
-                        className={`text-[10px] uppercase tracking-wider font-medium px-3 py-1 rounded-full ${b.cls}`}
+                        className={`text-[9px] sm:text-[10px] uppercase tracking-wider font-medium px-2.5 py-1 rounded-full ${b.cls}`}
                       >
                         {b.text}
                       </span>
                     ))}
                   </div>
-                  <h3 className="absolute bottom-4 left-4 text-xl font-medium text-white">
+
+                  {/* Project Title */}
+                  <h3 className="absolute bottom-3 left-4 right-4 text-lg sm:text-xl font-semibold text-white leading-snug">
                     {p.title}
                   </h3>
                 </div>
 
-                <div className="flex flex-1 flex-col p-6 sm:p-8">
-                  <div className="flex items-center gap-2 mb-4">
-                    <LuUser className="w-4 h-4 text-sky-600 dark:text-sky-400" />
-                    <span className="text-xs text-slate-500">{p.role}</span>
+                {/* Project Content */}
+                <div className="flex flex-1 flex-col p-4 sm:p-5 lg:p-6">
+                  {/* Role */}
+                  <div className="flex items-center gap-2 mb-3">
+                    <LuUser className="w-4 h-4 shrink-0 text-sky-600 dark:text-sky-400" />
+                    <span className="text-xs text-slate-500">
+                      {p.role}
+                    </span>
                   </div>
 
-                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                  {/* Description */}
+                  <p className="text-[13px] text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
                     {p.desc}
                   </p>
 
-                  <ul className="space-y-2.5 mb-6">
+                  {/* Project Highlights */}
+                  <ul className="space-y-2 mb-5">
                     {p.points.map((pt) => (
                       <li
                         key={pt}
-                        className="flex gap-2.5 text-xs text-slate-600 dark:text-slate-400 leading-relaxed"
+                        className="flex gap-2 text-xs text-slate-600 dark:text-slate-400 leading-relaxed"
                       >
                         <LuCheck className="w-3.5 h-3.5 shrink-0 mt-0.5 text-sky-600/70 dark:text-sky-400/70" />
-                        {pt}
+                        <span>{pt}</span>
                       </li>
                     ))}
                   </ul>
 
+                  {/* Buttons & Technology Stack */}
                   <div className="mt-auto">
+                    {/* Project Links */}
                     {(p.live || p.github) && (
-                      <div className="flex flex-wrap gap-3 mb-5">
+                      <div className="flex flex-wrap gap-2 mb-4">
                         {p.live && (
                           <a
                             href={p.live}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 text-xs font-medium px-4 py-2 rounded-lg bg-sky-500 text-white hover:bg-sky-600 transition-colors"
+                            className="inline-flex items-center gap-2 text-xs font-medium px-3.5 py-2 rounded-lg bg-sky-500 text-white hover:bg-sky-600 transition-colors"
                           >
                             <LuExternalLink className="w-3.5 h-3.5" />
                             Live Demo
                           </a>
                         )}
+
                         {p.github && (
                           <a
                             href={p.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 text-xs font-medium px-4 py-2 rounded-lg border border-slate-900/15 dark:border-white/15 text-slate-700 dark:text-slate-200 hover:bg-slate-900/[0.05] dark:hover:bg-white/[0.06] transition-colors"
+                            className="inline-flex items-center gap-2 text-xs font-medium px-3.5 py-2 rounded-lg border border-slate-900/15 dark:border-white/15 text-slate-700 dark:text-slate-200 hover:bg-slate-900/[0.05] dark:hover:bg-white/[0.06] transition-colors"
                           >
                             <FaGithub className="w-3.5 h-3.5" />
                             GitHub
@@ -211,11 +231,12 @@ export default function Projects() {
                       </div>
                     )}
 
-                    <div className="flex flex-wrap gap-1.5 pt-5 border-t border-slate-900/[0.08] dark:border-white/[0.06]">
+                 
+                    <div className="flex flex-wrap gap-1.5 pt-4 border-t border-slate-900/[0.08] dark:border-white/[0.06]">
                       {p.stack.map((t) => (
                         <span
                           key={t}
-                          className="text-[10px] bg-slate-900/[0.05] dark:bg-white/[0.06] text-slate-600 dark:text-slate-400 px-2.5 py-1 rounded"
+                          className="text-[10px] bg-slate-900/[0.05] dark:bg-white/[0.06] text-slate-600 dark:text-slate-400 px-2 py-1 rounded"
                         >
                           {t}
                         </span>
