@@ -43,7 +43,7 @@ const PROJECTS = [
 },
   
 {
-  img: "./filesketch-card.svg",
+  img: "./file-sketch.png",
   alt: "FileSketch VS Code Extension",
   title: "FileSketch – VS Code Extension",
   badges: [
