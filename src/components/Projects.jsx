@@ -5,6 +5,43 @@ import { Reveal, SectionHeading, card } from "./ui";
 
 const PROJECTS = [
   {
+  img: "./the-daily-card.png",
+  alt: "The Daily - AI News Platform",
+  title: "The Daily – AI News Platform",
+  badges: [
+    { text: "AI Powered", cls: "bg-sky-500/25 text-sky-200" },
+    {
+      text: "Web Application",
+      cls: "bg-white/15 text-white/85 backdrop-blur-sm",
+    },
+  ],
+  role: "Frontend Developer",
+  desc: "A modern AI-powered news platform that aggregates news from multiple sources, delivers AI-generated article summaries, and provides a clean, responsive reading experience with real-time news updates.",
+  points: [
+    "Built a responsive news platform using React and Tailwind CSS with categorized news feeds and an intuitive user interface",
+    "Integrated RSS-based news aggregation with server-side API endpoints for reliable feed fetching and CORS handling",
+    "Implemented AI-powered news summarization using Groq and Gemini API integrations",
+    "Developed secure server-side API routes for RSS fetching and dynamic Open Graph image generation",
+    "Added Progressive Web App (PWA) support for an app-like browsing experience across devices",
+    "Optimized the application for performance, responsive layouts, and production deployment on Vercel",
+  ],
+  stack: [
+    "React",
+    "JavaScript",
+    "Vite",
+    "Tailwind CSS",
+    "Groq API",
+    "Gemini API",
+    "RSS",
+    "Node.js",
+    "Vercel",
+    "PWA",
+  ],
+  live: "https://the-daily-ai-news-platform.vercel.app/",
+  github: "https://github.com/AnturDN/The-Daily---AI-News-Platform",
+  delay: 0,
+},
+  {
     img: "./deepfake-detection-card.svg",
     alt: "Deepfake Video Detection",
     title: "Deepfake Video Detection",
@@ -72,7 +109,7 @@ const PROJECTS = [
       { text: "Full Stack", cls: "bg-emerald-500/25 text-emerald-200" },
       { text: "Management", cls: "bg-white/15 text-white/85 backdrop-blur-sm" },
     ],
-    role: "Frontend Developer",
+    role: "Full Stack Developer",
     desc: "A full-featured inventory system for tracking products, suppliers, stock levels, and warehouse operations with automated financial calculations.",
     points: [
       "Implemented CRUD with search & pagination",
