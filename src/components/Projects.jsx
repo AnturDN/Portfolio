@@ -41,6 +41,43 @@ const PROJECTS = [
   github: "https://github.com/AnturDN/The-Daily---AI-News-Platform",
   delay: 0,
 },
+  
+{
+  img: "./filesketch-card.svg",
+  alt: "FileSketch VS Code Extension",
+  title: "FileSketch – VS Code Extension",
+  badges: [
+    { text: "Developer Tool", cls: "bg-sky-500/25 text-sky-200" },
+    {
+      text: "VS Code Extension",
+      cls: "bg-white/15 text-white/85 backdrop-blur-sm",
+    },
+  ],
+  role: "Extension Developer",
+  desc: "A VS Code extension that provides a persistent, file-specific infinite whiteboard for creating visual notes, architectural sketches, and flowcharts directly alongside your code. It offers a smooth, Figma-inspired drawing experience without cluttering the project workspace.",
+  points: [
+    "Developed a file-specific whiteboard that automatically switches and saves sketches based on the active code file",
+    "Implemented an infinite canvas with smooth zooming, panning, and DPI-aware vector rendering",
+    "Added drawing tools, shapes, arrows, text editing, and continuous drag-to-erase functionality",
+    "Built Figma-style multi-selection, resizing, and clipboard support for copying, cutting, and pasting elements",
+    "Implemented unlimited undo/redo history for a flexible and reliable drawing experience",
+    "Designed local JSON-based storage using VS Code global storage to keep user sketches private and separate from project files",
+  ],
+  stack: [
+    "JavaScript",
+    "VS Code API",
+    "Webview API",
+    "HTML",
+    "CSS",
+    "SVG",
+    "JSON",
+    "Node.js",
+  ],
+  live: "https://marketplace.visualstudio.com/items?itemName=antur-dev.filesketch",
+  github: "https://github.com/AnturDN/FileSketch-vscode-extension",
+  delay: 0,
+},
+
   {
     img: "./deepfake-detection-card.svg",
     alt: "Deepfake Video Detection",
