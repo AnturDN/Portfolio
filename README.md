@@ -1,16 +1,103 @@
-# React + Vite
+# Antur Deb Nath - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive personal portfolio built with React, Vite, and Tailwind CSS. This website showcases my technical skills, projects, experience, and journey as a Software Developer.
 
-Currently, two official plugins are available:
+🌐 **Live Website:** [anturdebnath.vercel.app](https://anturdebnath.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Overview
 
-## React Compiler
+This portfolio is my personal space on the web where I present my development journey, technical knowledge, and projects. It is designed to provide visitors with a clear overview of my work and experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
 
-## Expanding the ESLint configuration
+- Personal introduction and profile
+- Technical skills showcase
+- Project portfolio
+- Experience and professional background
+- Responsive user interface
+- Modern and clean design
+- Contact information
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tech Stack
+
+| Technology | Purpose |
+|---|---|
+| React 19 | Frontend library |
+| Vite | Development and build tool |
+| Tailwind CSS | Styling |
+| JavaScript | Application logic |
+| React Icons | Icons |
+
+## Getting Started
+
+Follow these steps to run the project locally.
+
+### Prerequisites
+
+- Node.js
+- npm
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/AnturDN/Portfolio.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd Portfolio
+   ```
+
+3. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+5. Open the local URL shown in your terminal.
+
+## Available Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+
+## Project Structure
+
+```text
+Portfolio/
+├── public/
+├── src/
+├── index.html
+├── package.json
+├── vite.config.js
+├── tailwind.config.js
+└── README.md
+```
+
+## Deployment
+
+The portfolio is deployed on Vercel.
+
+**Live Website:** https://anturdebnath.vercel.app/
+
+## Contact
+
+- **GitHub:** [AnturDN](https://github.com/AnturDN)
+- **Portfolio:** [anturdebnath.vercel.app](https://anturdebnath.vercel.app/)
+
+---
+
+⭐ If you find this project interesting, feel free to explore the repository!
